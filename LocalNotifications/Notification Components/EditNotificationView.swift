@@ -10,6 +10,8 @@ import SwiftUI
 struct EditNotificationView: View {
     
     let notificationManager = NotificationManager()
+    let backgroundRefresher = BackgroundNotificationManager()
+
     
     var body: some View {
         NavigationView {
@@ -52,8 +54,9 @@ struct EditNotificationView: View {
                         
                         HStack{
                             Button("SAVE") {
-                                
-                                notificationManager.scheduleNotifications(numberOfNotifications: 60)
+                                // Schedule periodic notifications
+                                notificationManager.scheduleNotifications(numberOfNotifications: 20)
+                                backgroundRefresher.scheduleBackgroundRefresh()
                             }
                         }
                     }

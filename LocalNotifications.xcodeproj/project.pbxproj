@@ -11,6 +11,7 @@
 		6C1B10D42BC3003D0042FF9B /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B10D32BC3003D0042FF9B /* Stepper.swift */; };
 		6C2E94DC2BC2C2B600712779 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E94DB2BC2C2B600712779 /* NotificationView.swift */; };
 		6C43B82E2BC3EC6E00A73143 /* DaysPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B82D2BC3EC6E00A73143 /* DaysPicker.swift */; };
+		6C765C292BDFACAE005A57EC /* BackgroundNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C765C282BDFACAE005A57EC /* BackgroundNotification.swift */; };
 		6CB4862F2BC43BEC00F1F302 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB4862E2BC43BEC00F1F302 /* NotificationManager.swift */; };
 		BB8AE021283BE07500E4D7FE /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8AE020283BE07500E4D7FE /* LocalNotification.swift */; };
 		BBADB771283A8F3700C6C57A /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBADB770283A8F3700C6C57A /* AppEntry.swift */; };
@@ -25,8 +26,10 @@
 		6C1B10D32BC3003D0042FF9B /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		6C2E94DB2BC2C2B600712779 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6C43B82D2BC3EC6E00A73143 /* DaysPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysPicker.swift; sourceTree = "<group>"; };
-		6C57B2722BC59CC300CA3E4A /* LocalNotifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = LocalNotifications.app; path = "/Users/yusufgurel/Desktop/LocalNotifications-Lesson-4-Complete/build/Debug-iphoneos/LocalNotifications.app"; sourceTree = "<absolute>"; };
+		6C765C272BDF9E67005A57EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6C765C282BDFACAE005A57EC /* BackgroundNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundNotification.swift; sourceTree = "<group>"; };
 		6CB4862E2BC43BEC00F1F302 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		6CE12B212BC9635000242C54 /* LocalNotifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8AE020283BE07500E4D7FE /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		BBADB770283A8F3700C6C57A /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		BBADB772283A8F3700C6C57A /* NotificationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsListView.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 				6C1B10D32BC3003D0042FF9B /* Stepper.swift */,
 				6C43B82D2BC3EC6E00A73143 /* DaysPicker.swift */,
 				6CB4862E2BC43BEC00F1F302 /* NotificationManager.swift */,
+				6C765C282BDFACAE005A57EC /* BackgroundNotification.swift */,
 			);
 			path = "Notification Components";
 			sourceTree = "<group>";
@@ -62,12 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				BBADB76F283A8F3700C6C57A /* LocalNotifications */,
+				6CE12B212BC9635000242C54 /* LocalNotifications.app */,
 			);
 			sourceTree = "<group>";
 		};
 		BBADB76F283A8F3700C6C57A /* LocalNotifications */ = {
 			isa = PBXGroup;
 			children = (
+				6C765C272BDF9E67005A57EC /* Info.plist */,
 				BBADB770283A8F3700C6C57A /* AppEntry.swift */,
 				BBADB772283A8F3700C6C57A /* NotificationsListView.swift */,
 				BB8AE020283BE07500E4D7FE /* LocalNotification.swift */,
@@ -94,11 +100,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBADB77B283A8F3800C6C57A /* Build configuration list for PBXNativeTarget "LocalNotifications" */;
 			buildPhases = (
-				161E63EF9FA8C1A7A1F386F3 /* [CP] Check Pods Manifest.lock */,
 				BBADB769283A8F3700C6C57A /* Sources */,
 				BBADB76A283A8F3700C6C57A /* Frameworks */,
 				BBADB76B283A8F3700C6C57A /* Resources */,
-				6956AA8E596D5B30BDCD4200 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,7 +110,7 @@
 			);
 			name = LocalNotifications;
 			productName = LocalNotifications;
-			productReference = 6C57B2722BC59CC300CA3E4A /* LocalNotifications.app */;
+			productReference = 6CE12B212BC9635000242C54 /* LocalNotifications.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,53 +158,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		161E63EF9FA8C1A7A1F386F3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LocalNotifications-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6956AA8E596D5B30BDCD4200 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LocalNotifications/Pods-LocalNotifications-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LocalNotifications/Pods-LocalNotifications-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocalNotifications/Pods-LocalNotifications-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		BBADB769283A8F3700C6C57A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C765C292BDFACAE005A57EC /* BackgroundNotification.swift in Sources */,
 				BB8AE021283BE07500E4D7FE /* LocalNotification.swift in Sources */,
 				6C43B82E2BC3EC6E00A73143 /* DaysPicker.swift in Sources */,
 				6CB4862F2BC43BEC00F1F302 /* NotificationManager.swift in Sources */,
@@ -338,9 +301,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LocalNotifications/Preview Content\"";
-				DEVELOPMENT_TEAM = RKV4UP49S6;
+				DEVELOPMENT_TEAM = 37WD854UWX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LocalNotifications/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -352,7 +316,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.createchsol.LocalNotifications;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurel.LocalNotifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -368,9 +332,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LocalNotifications/Preview Content\"";
-				DEVELOPMENT_TEAM = RKV4UP49S6;
+				DEVELOPMENT_TEAM = 37WD854UWX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LocalNotifications/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -382,7 +347,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.createchsol.LocalNotifications;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurel.LocalNotifications;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

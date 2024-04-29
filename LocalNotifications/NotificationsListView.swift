@@ -57,10 +57,6 @@ struct NotificationsListView: View {
                             NavigationLink(destination: NotificationView()) {
                                 Text("Go to NotificationView")
                             }
-                            
-                            NavigationLink(destination: DLLN()) {
-                                Text("Go to DLLN")
-                            }
                         }
                     }
                     .frame(width: 300)
